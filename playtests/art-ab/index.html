@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <title>Forest Mech — art A/B playtest</title>
+    <style>html,body{touch-action:none;overscroll-behavior:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;background:#2a2a25;height:100%;margin:0;overflow:hidden}#app{position:fixed;inset:0}#app canvas{touch-action:none;width:100%;height:100%;display:block}.ui{color:#f4efe2;text-shadow:0 1px 2px #0009;pointer-events:none;-webkit-user-select:none;user-select:none;font:13px/1.35 system-ui,-apple-system,Segoe UI,sans-serif;position:fixed}#status{background:#2a2a25;justify-content:center;align-items:center;font-size:16px;transition:opacity .4s;display:flex;inset:0}#status.error{color:#ffd7c4;text-align:center;white-space:pre-wrap;pointer-events:auto;background:#2c1d1d;padding:24px}#looks{left:50%;top:max(10px, env(safe-area-inset-top));flex-direction:column;align-items:center;gap:6px;display:flex;transform:translate(-50%)}#look-btns{pointer-events:auto;gap:8px;display:flex}#look-btns button{cursor:pointer;color:#f4efe2;touch-action:none;background:#1e1e1c80;border:2px solid #f4efe28c;border-radius:20px;min-height:40px;padding:10px 14px;font:600 14px/1 system-ui,sans-serif}#look-btns button.on{color:#2a2a25;background:#f4efe2;border-color:#f4efe2}#look-title{background:#1e1e1c73;border-radius:10px;padding:3px 10px;font-size:12px}#help{left:max(12px, env(safe-area-inset-left));bottom:max(12px, env(safe-area-inset-bottom));background:#1e1e1c6b;border-radius:8px;padding:6px 10px}#help kbd{font:inherit;border:1px solid #f4efe273;border-radius:4px;padding:0 4px}#stick{width:112px;height:112px;left:calc(max(18px, env(safe-area-inset-left)) + 62px);top:calc(100% - max(18px, env(safe-area-inset-bottom)) - 62px);pointer-events:none;opacity:.75;background:#1e1e1c47;border:2px solid #f4efe280;border-radius:50%;margin:-56px 0 0 -56px;display:none;position:fixed}#stick.active{opacity:1;background:#1e1e1c61}#knob{background:#f4efe299;border-radius:50%;width:50px;height:50px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}#touchbtns{right:max(14px, env(safe-area-inset-right));bottom:max(18px, env(safe-area-inset-bottom));flex-direction:column;gap:10px;display:none;position:fixed}#touchbtns button{color:#f4efe2;touch-action:none;pointer-events:auto;background:#1e1e1c6b;border:2px solid #f4efe280;border-radius:50%;width:54px;height:54px;padding:0;font:600 22px/1 system-ui,sans-serif}#touchbtns button.pressed{background:#f4efe259}#touchbtns svg{vertical-align:middle;width:24px;height:24px}body.touch-ui #stick{display:block}body.touch-ui #touchbtns{display:flex}body.touch-ui .desk,body:not(.touch-ui) .touch{display:none}</style>
+    <script type="module" crossorigin src="./assets/index-CN--kRNL.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="looks" class="ui">
+      <div id="look-btns"><button id="look-1" type="button">1 Gouache</button><button id="look-4" type="button">4 Woodcut</button></div>
+      <div id="look-title"></div>
+    </div>
+    <div id="help" class="ui">
+      <span class="desk"><kbd>WASD</kbd> walk · drag to orbit · wheel zoom · <kbd>1</kbd>/<kbd>4</kbd> switch look</span>
+      <span class="touch">Left stick walks · drag to orbit · tap 1 / 4 to switch</span>
+    </div>
+    <div id="stick"><div id="knob"></div></div>
+    <div id="touchbtns" class="ui">
+      <button id="btn-zoomin" type="button" aria-label="Zoom in">+</button>
+      <button id="btn-zoomout" type="button" aria-label="Zoom out">−</button>
+      <button id="btn-reset" type="button" aria-label="Reset view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/></svg></button>
+    </div>
+    <div id="status" class="ui">Loading clearing…</div>
+  </body>
+</html>
